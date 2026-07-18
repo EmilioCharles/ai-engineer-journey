@@ -7,3 +7,5 @@ __pycache__/
 .DS_Store
 notebooks/scratch/
 outputs/
+p2-rag/docs/
+p2-rag/chroma_db/
