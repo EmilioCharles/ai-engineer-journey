@@ -44,3 +44,17 @@ error today — check the prompt path first.
 
 Stuck: Vercel deploy not attempted — moved to Sunday morning by design.
 
+
+
+\## Jul 19 — Week 2, Sunday (pre-audit)
+
+Did: Deployed RAG v0 to Vercel — live at https://apexxtech-rag.vercel.app
+
+Serverless variant uses BM25 retrieval (rank\_bm25) instead of Chroma vectors
+
+(80MB embed model unfit for serverless); local version keeps semantic search.
+
+Verified live: DoD question answered with citations from SOW+MSA. Env var flow,
+
+CLI deploy, cold starts — all new today.
+
