@@ -58,3 +58,43 @@ Verified live: DoD question answered with citations from SOW+MSA. Env var flow,
 
 CLI deploy, cold starts — all new today.
 
+
+
+\## July 20 — Week 2 audit, Monday
+
+Did: Drew the transformer from memory. First attempt came out as RAG
+
+architecture instead of the transformer — I had blurred the system I
+
+built around the model with the model itself. Redrew it correctly
+
+after the correction.
+
+
+
+The flow: TOKENS (breaking input into chunks, e.g. words/characters)
+
+\--> EMBEDDING (converting chunks into numbers positioned in a
+
+higher-dimensional space, plus position info so order is known)
+
+\--> \[ATTENTION + MLP] x N (attention: each token takes a weighted
+
+average of the other tokens, weighted by relevance — communication;
+
+MLP: each token then processes what it gathered — computation.
+
+Each sub-layer has a skip arrow: its result is ADDED to an untouched
+
+copy of its input (x + f(x)), so layers make edits, not rewrites,
+
+and the signal + training gradient survive N blocks deep)
+
+\--> LOGITS (final layer; unnormalised scores per vocabulary token —
+
+positive, negative or zero)
+
+\--> SOFTMAX (scores converted into probabilities)
+
+\--> NEXT TOKEN (sampled; append and repeat).
+
