@@ -98,3 +98,33 @@ positive, negative or zero)
 
 \--> NEXT TOKEN (sampled; append and repeat).
 
+
+
+\--> ATTENTION MECHANISM
+
+This is the layer where tokens exchange information. Each token looks
+
+back at the tokens before it and asks which of them are relevant to
+
+understanding itself in this context. It does this by broadcasting what
+
+it is looking for (its query) and comparing that against what every
+
+earlier token advertises that it contains (its keys); how well those
+
+match becomes a relevance score. Those scores decide the mix: the token
+
+takes a weighted average of the other tokens' content (their values),
+
+absorbing a lot from the relevant ones and almost nothing from the
+
+irrelevant ones. It leaves the layer with the same shape it came in
+
+with, but now enriched by context — "bank" after "river" carries
+
+different meaning than "bank" after "money". Attention itself never
+
+picks a word; it only sharpens each token's representation. The actual
+
+next-token choice happens later at logits + softmax.
+
