@@ -128,3 +128,39 @@ picks a word; it only sharpens each token's representation. The actual
 
 next-token choice happens later at logits + softmax.
 
+
+
+
+
+\## July 26th— Week 3, eval seed pairs
+
+Read Hamel "Your AI Product Needs Evals" + cross-examined. Then wrote 5
+
+eval questions and tested them against the live RAG:
+
+
+
+1\. What is ApexxTech? — PASS (correct)
+
+2\. What services does ApexxTech offer? — WEAK: answer incomplete,
+
+&#x20;  didn't retrieve services.md (retrieval miss)
+
+3\. Who founded MKA? — PASS (correct: "two brothers, unnamed" — good faithfulness)
+
+4\. Is there a discount? — PASS (correctly refused, no hallucination)
+
+5\. What are the payment terms? — FAIL: said "not in documents" but MSA
+
+&#x20;  Section 5 has them (14-day payment, 1.5%/mo interest, 21-day suspension).
+
+&#x20;  Retrieval miss, not generation.
+
+
+
+Finding: 2 retrieval misses (Q2, Q5), both on cross-document questions.
+
+Single-fact and refusal questions pass. This is what hybrid search /
+
+reranking (Weeks 5-6) should fix. These 5 become Week 4 labeled pairs.
+
