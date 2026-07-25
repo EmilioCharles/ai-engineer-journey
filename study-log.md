@@ -164,3 +164,7 @@ Single-fact and refusal questions pass. This is what hybrid search /
 
 reranking (Weeks 5-6) should fix. These 5 become Week 4 labeled pairs.
 
+
+
+Public post #1 — Week 3 build-in-public on LinkedIn (link), 37 impressions. Streak started.
+
