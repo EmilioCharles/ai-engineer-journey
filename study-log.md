@@ -168,3 +168,31 @@ reranking (Weeks 5-6) should fix. These 5 become Week 4 labeled pairs.
 
 Public post #1 — Week 3 build-in-public on LinkedIn (link), 37 impressions. Streak started.
 
+
+
+\#side note and studies for chapter 6 by Chip Huyen (RAG AND AGENTS)
+
+RAG solves two limits — the model doesn't know your specific/current data (knowledge), and can't fit it all in the window (context). Memory is a related third limit (persistence across turns), usually implemented with the same retrieval machinery.
+
+
+
+Lexical (BM25) = word match, great for exact terms/names, blind to synonyms. Semantic (embeddings) = meaning match via nearest vectors, great for paraphrase, can blur exact terms. Complementary blind spots → hybrid search combines them (Week 5).
+
+
+
+Efficiency: recall (of NN), QPS, build time, index size — is the system fast and scalable?
+
+Quality: context precision, context recall, MRR/NDCG/hit-rate — did it retrieve the right things?
+
+
+
+LLM that acts in a loop (think → act → observe → repeat), vs a one-shot LLM call. Components: model (reasoning), tools (actions on the environment), memory/planning (state + sequencing across steps).
+
+
+
+Agent reliability compounds multiplicatively — 95% per step over 10 steps ≈ 60% success. Errors multiply, not add. So: fewer steps, higher per-step reliability, checkpoints. This is why agents are harder than single LLM calls.
+
+
+
+Why the roadmap is ordered this way: the agent capstone (Phase C) is gated behind a working eval harness because agent reliability can't be improved without measuring where it breaks. Measurement (Week 4 harness) must come before agents. Build → measure → improve, in that order.
+
