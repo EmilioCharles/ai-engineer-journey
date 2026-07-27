@@ -196,3 +196,7 @@ Agent reliability compounds multiplicatively — 95% per step over 10 steps ≈ 
 
 Why the roadmap is ordered this way: the agent capstone (Phase C) is gated behind a working eval harness because agent reliability can't be improved without measuring where it breaks. Measurement (Week 4 harness) must come before agents. Build → measure → improve, in that order.
 
+
+
+Week 3 audit: PASS. All deliverables met — refactor, architecture doc, Hamel + Chip 6 cross-exams, public post. Carry-forward: Chip 4-5, Hamel #2, P1 close-out (now 3 wks old).
+
