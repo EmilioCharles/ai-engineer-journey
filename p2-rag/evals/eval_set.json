@@ -138,5 +138,78 @@
     "gold_answer": "Expand to approximately 30,000 acres, build a network of about 10,000 registered outgrowers, develop integrated production/aggregation/storage/processing/distribution systems, and become a leading agribusiness delivering economic and social impact.",
     "expected_sources": ["mka-company-profile.md"],
     "type": "easy"
+  },
+
+  
+  {
+    "id": 21,
+    "question": "How much does the MKA platform project cost?",
+    "gold_answer": "The MKA platform project was quoted at $1,500 USD for design and development, with ongoing deployment and infrastructure costs estimated at $800–900 USD per year.",
+    "expected_sources": ["pricing.md"],
+    "type": "medium"
+  },
+  {
+    "id": 22,
+    "question": "What is the mobilisation payment and when is it due?",
+    "gold_answer": "A mobilisation payment of typically 20% of the total is due on signature of the SOW, and is credited against milestones M0 and M1 in equal parts.",
+    "expected_sources": ["apexxtech-sow-mka.md"],
+    "type": "medium"
+  },
+  {
+    "id": 23,
+    "question": "What are the milestones in the MKA payment schedule?",
+    "gold_answer": "M0 Foundation (F0, F2); M1 Registry (F3-F5); M2 Intake/first go-live (F6-F7); M3 Inputs & credit (F8-F9); M4 Production & extension (F10-F11); M5 Commerce (F12-F14); M6 Finance & analytics (F15-F17); M7 Field mobility (F18); M8 Launch (F19-F20). Fees are fixed per milestone and invoiced on acceptance of the milestone's final feature.",
+    "expected_sources": ["apexxtech-sow-mka.md"],
+    "type": "hard"
+  },
+  {
+    "id": 24,
+    "question": "What is the estimated total build time for the platform?",
+    "gold_answer": "Approximately 133 working days (~27 weeks solo, or ~16-18 weeks with two developers). The SOW gives an indicative schedule of about 22 weeks from the start date.",
+    "expected_sources": ["mka-build-plan.md", "apexxtech-sow-mka.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 25,
+    "question": "What is the confidentiality term under the NDA?",
+    "gold_answer": "The NDA covers disclosures made during the three years after the effective date. Confidentiality obligations continue for five years from disclosure, and indefinitely for trade secrets, source code, and personal data.",
+    "expected_sources": ["apexxtech-nda.md"],
+    "type": "medium"
+  },
+  {
+    "id": 26,
+    "question": "Does ApexxTech offer a money-back guarantee?",
+    "gold_answer": "The documents do not mention any money-back guarantee.",
+    "expected_sources": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": 27,
+    "question": "What sub-processors does the DPA authorize?",
+    "gold_answer": "Cloud infrastructure and storage providers, SMS/USSD gateway providers, error-monitoring services, and email delivery services (e.g. cloud host, Africa's Talking or equivalent SMS, Sentry monitoring). ApexxTech must notify the client of changes, giving 10 business days to object.",
+    "expected_sources": ["apexxtech-dpa.md"],
+    "type": "medium"
+  },
+  {
+    "id": 28,
+    "question": "What is the walking skeleton (feature F0)?",
+    "gold_answer": "F0 is the foundation feature: a Django project with the module layout, core abstractions (BaseModel with UUIDv7, org-scoping, soft-delete), an append-only AuditEvent model with middleware, a domain event bus, DRF setup (cursor pagination, RFC 7807 errors, Idempotency-Key), Docker Compose, CI, and a Next.js 15 frontend shell. Estimated 8 days.",
+    "expected_sources": ["mka-build-plan.md"],
+    "type": "hard"
+  },
+  {
+    "id": 29,
+    "question": "How does the platform handle farmer credit and recovery at harvest?",
+    "gold_answer": "Inputs are issued on credit and recorded in an append-only credit ledger. At harvest intake, recovery is automatically computed as a deduction, capped at a configurable percentage (e.g. max 60%) of a single delivery's payable, to avoid zeroing out farmers and driving side-selling. The farmer receives an SMS receipt showing the deduction and running balance.",
+    "expected_sources": ["mka-technical-spec.md", "mka-build-plan.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 30,
+    "question": "What programming language should I use to rewrite the backend in Rust?",
+    "gold_answer": "The documents specify a Django/Python backend and do not discuss Rust or any backend rewrite. This question cannot be answered from the provided documents.",
+    "expected_sources": [],
+    "type": "unanswerable"
   }
+
 ]
