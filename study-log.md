@@ -200,3 +200,35 @@ Why the roadmap is ordered this way: the agent capstone (Phase C) is gated behin
 
 Week 3 audit: PASS. All deliverables met — refactor, architecture doc, Hamel + Chip 6 cross-exams, public post. Carry-forward: Chip 4-5, Hamel #2, P1 close-out (now 3 wks old).
 
+
+
+
+
+\#note on post 2 by Hamel on how to evaluate an ai system
+
+
+
+Code assertions = deterministic, literal, cheap — great for format/length/presence, blind to meaning. LLM judge = evaluates semantic quality (faithfulness, relevance, correctness vs. reference, completeness) — the "is this actually good?" that code can't check. Use both: code for mechanical, judge for meaning.
+
+
+
+Before trusting an LLM judge, validate it against human labels — measure how often judge agrees with a human on the same examples. High agreement → trust and scale it. Low agreement → fix the judge prompt and re-measure. Never trust an unvalidated judge; it gives false confidence.
+
+
+
+Domain expert = the one who knows what "good" looks like (often founder/CEO; for your RAG, you). One "benevolent dictator," not a committee — because quality is subjective at the edges, and one decisive voice keeps the standard consistent across all examples. Committees produce contradictory labels a judge can't learn from.
+
+
+
+Judge outputs binary pass/fail, NOT a 1–10 score. Numeric scores are fake precision  nobody distinguishes a 6 from a 7 reliably, so scores are noise. Binary forces a real, consistent "acceptable or not?" decision. (Paired with a written critique — see next.)
+
+
+
+
+
+Judge writes critique/reasoning FIRST, then binary verdict. Reasoning-first makes the verdict better (like chain-of-thought — examining before deciding beats deciding then rationalizing). The critique is also a debugging goldmine: it tells you WHY answers fail, feeding error analysis. And it lets you audit whether the judge itself reasons correctly
+
+
+
+The judge evaluates the RAG's PREDICTED answer, measured against the GOLD answer (the reference/answer key I wrote). Gold answer isn't graded — it's the standard. Giving the judge the gold answer means it compares "predicted vs. reference" instead of guessing what "correct" means alone — easier, more reliable, and grounded in my expert judgment.
+
