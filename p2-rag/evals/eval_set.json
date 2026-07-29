@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "What is ApexxTech?",
+    "gold_answer": "ApexxTech LLC is a Wyoming-registered digital agency providing software design, development, and consulting services, engaged by MKA Agribusiness to build a farm-management and outgrower-aggregation platform.",
+    "expected_sources": ["apexxtech-msa.md"],
+    "type": "easy"
+  },
+  {
+    "id": 2,
+    "question": "What services does ApexxTech offer?",
+    "gold_answer": "Software design, development, and consulting services for digital products; specifically engaged to design, build, and deliver the MKA farm-management and outgrower-aggregation platform and related services.",
+    "expected_sources": ["apexxtech-msa.md", "services.md"],
+    "type": "medium"
+  },
+  {
+    "id": 3,
+    "question": "Who founded the MKA project?",
+    "gold_answer": "MKA Agribusiness was founded by two brothers who shared a passion for agriculture. The documents do not give their specific names.",
+    "expected_sources": ["mka-company-profile.md"],
+    "type": "medium-faithfulness"
+  },
+  {
+    "id": 4,
+    "question": "What are the payment terms?",
+    "gold_answer": "Fees are payable within 14 days of invoice; late amounts accrue 1.5% monthly interest; ApexxTech may suspend services if an undisputed invoice is more than 21 days overdue. Fees are per-milestone fixed amounts with a 20% mobilisation payment due on SOW signature.",
+    "expected_sources": ["apexxtech-msa.md", "apexxtech-sow-mka.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 5,
+    "question": "Is there a discount available?",
+    "gold_answer": "The documents do not contain any information about discounts.",
+    "expected_sources": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": 6,
+    "question": "What happens if a feature fails its Definition of Done checklist?",
+    "gold_answer": "The feature is rejected with the specific unmet checklist items listed. Acceptance is binary — every item is verified, or the feature is rejected. There is no partial acceptance.",
+    "expected_sources": ["apexxtech-sow-mka.md", "apexxtech-msa.md"],
+    "type": "medium"
+  },
+  {
+    "id": 7,
+    "question": "How does the offline mobile app handle sync conflicts?",
+    "gold_answer": "Conflicts are resolved per-field: inserts can't conflict; financial and status fields are server-wins; descriptive fields use last-writer-wins with an audit; identity fields go to manual review. The device is the source of truth until sync, using client-generated UUIDs for idempotency.",
+    "expected_sources": ["mka-technical-spec.md"],
+    "type": "hard"
+  },
+  {
+    "id": 8,
+    "question": "What security measures does the DPA require for personal data?",
+    "gold_answer": "Encryption in transit (TLS 1.2+) and at rest; field-level encryption of national IDs, phone numbers, and payment identifiers; tokenised display of payment instruments; role-based deny-by-default access control; append-only audit logging; encrypted local storage on mobile; daily encrypted backups.",
+    "expected_sources": ["apexxtech-dpa.md"],
+    "type": "medium"
+  },
+  {
+    "id": 9,
+    "question": "What is feature F9 in the build plan?",
+    "gold_answer": "F9 is Input Issuance & Credit Ledger — the fraud-critical slice. It covers the issuance workflow (request, threshold approval, physical issue with farmer OTP), an append-only credit ledger with balances derived via materialized view, automatic recovery deductions capped at a configurable percentage, and property-based tests ensuring the ledger stays consistent.",
+    "expected_sources": ["mka-build-plan.md"],
+    "type": "hard"
+  },
+  {
+    "id": 10,
+    "question": "How many acres and outgrowers does MKA currently operate?",
+    "gold_answer": "Approximately 512 acres under operation, about 67 direct employees, and 184 registered outgrowers.",
+    "expected_sources": ["mka-company-profile.md"],
+    "type": "easy"
+  },
+  {
+    "id": 11,
+    "question": "What is the deployment and infrastructure cost estimate?",
+    "gold_answer": "Ongoing deployment and infrastructure costs are estimated at $800–900 USD per year, covering cloud hosting, database, SMS gateway credits, and monitoring.",
+    "expected_sources": ["pricing.md"],
+    "type": "medium"
+  },
+  {
+    "id": 12,
+    "question": "What technology stack does the MKA platform use?",
+    "gold_answer": "Django 5 + DRF (Python 3.12) backend; PostgreSQL 18 with PostGIS; Celery + Redis for async work; Next.js 15 + TypeScript + Tailwind web frontend; React Native (Expo) with SQLite for the offline field app; Africa's Talking for SMS/USSD; S3-compatible object storage. Deployed via Docker on a single VM to start.",
+    "expected_sources": ["mka-technical-spec.md"],
+    "type": "hard"
+  },
+  {
+    "id": 13,
+    "question": "What is the first externally demoable milestone in the build plan?",
+    "gold_answer": "Feature F6 — Harvest Intake & Grading. It lands around day 44 and is the first 'money-moment' demo: a full simulated buying day runs digitally with intakes, grading, SMS receipts, and credit deductions.",
+    "expected_sources": ["mka-build-plan.md"],
+    "type": "hard"
+  },
+  {
+    "id": 14,
+    "question": "How does the platform prevent fraud at input issuance and harvest intake?",
+    "gold_answer": "Dual-control approval on money-adjacent actions (a second role must approve); append-only credit ledger with balances derived not stored; recovery deductions capped at a configurable percentage of a delivery; farmer OTP/signature on issuance; scale calibration logs blocking stale intakes; second-grader sign-off on disputes; and anomaly jobs detecting side-selling, issuance spikes, and grading bias.",
+    "expected_sources": ["mka-technical-spec.md", "mka-build-plan.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 15,
+    "question": "What are the client's obligations under the agreement?",
+    "gold_answer": "Appoint a product owner with authority to make decisions within 5 business days; provide timely access to information, personnel, existing data, premises, and third-party accounts (SMS gateway, hosting, domain); be responsible for the accuracy of client-provided data; and pay third-party costs (hosting, SMS credits, licences) unless included in the fees.",
+    "expected_sources": ["apexxtech-msa.md", "apexxtech-sow-mka.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 16,
+    "question": "What is the client contact's phone number?",
+    "gold_answer": "The documents do not contain the client contact's phone number.",
+    "expected_sources": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": 17,
+    "question": "What happens to a personal data breach under the DPA?",
+    "gold_answer": "ApexxTech must notify the client without undue delay after becoming aware of a personal data breach affecting the client's personal data, providing sufficient information to allow the client to meet its own notification obligations.",
+    "expected_sources": ["apexxtech-dpa.md"],
+    "type": "medium"
+  },
+  {
+    "id": 18,
+    "question": "What is out of scope for the MKA project?",
+    "gold_answer": "IoT/sensor and satellite-imagery integration; automated mobile-money disbursement (integration seam only); marketplace or buyer-portal features; iOS field app; data entry of historical paper records; ongoing content/marketing services; and third-party costs of any kind.",
+    "expected_sources": ["apexxtech-sow-mka.md", "mka-technical-spec.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 19,
+    "question": "How is the RBAC permission system structured?",
+    "gold_answer": "Role-based with per-object scoping — a farm manager sees only assigned farms, a warehouse manager only their depots. Implemented as role→permission grants plus user→scope assignments, with permission verbs create/read/update/delete/approve/export. Deny-by-default, enforced at a single service-layer choke point, with dual-control approval required on money-adjacent mutations.",
+    "expected_sources": ["mka-technical-spec.md"],
+    "type": "hard"
+  },
+  {
+    "id": 20,
+    "question": "What are MKA's expansion goals for 2030?",
+    "gold_answer": "Expand to approximately 30,000 acres, build a network of about 10,000 registered outgrowers, develop integrated production/aggregation/storage/processing/distribution systems, and become a leading agribusiness delivering economic and social impact.",
+    "expected_sources": ["mka-company-profile.md"],
+    "type": "easy"
+  }
+]
