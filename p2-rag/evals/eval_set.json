@@ -210,6 +210,79 @@
     "gold_answer": "The documents specify a Django/Python backend and do not discuss Rust or any backend rewrite. This question cannot be answered from the provided documents.",
     "expected_sources": [],
     "type": "unanswerable"
+  },
+
+  
+  {
+    "id": 31,
+    "question": "What non-functional performance requirements does the platform target?",
+    "gold_answer": "99.5% availability for web/API (single region v1); field app fully functional offline; p95 API response under 400ms; dashboards under 2s on 3G; full-day sync under 90s on 2G-grade links with a payload budget under 2MB excluding photos.",
+    "expected_sources": ["mka-technical-spec.md"],
+    "type": "hard"
+  },
+  {
+    "id": 32,
+    "question": "What is the change control procedure?",
+    "gold_answer": "Either party may propose a change in writing describing the change, its rationale, and impact on fees and schedule. ApexxTech provides an impact assessment within 5 business days. No change is effective until both parties sign the change request. ApexxTech may decline changes that compromise system integrity or security.",
+    "expected_sources": ["apexxtech-sow-mka.md"],
+    "type": "medium"
+  },
+  {
+    "id": 33,
+    "question": "How does the platform detect side-selling by farmers?",
+    "gold_answer": "Through anomaly-detection heuristics comparing contracted area times an agronomic yield benchmark against actually delivered volume, flagging farmers whose deliveries fall short of expected output. This is part of the fraud-control and anomaly-detection jobs.",
+    "expected_sources": ["mka-technical-spec.md", "mka-build-plan.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 34,
+    "question": "What happens on final payment and handover?",
+    "gold_answer": "On final payment, handover includes source code repositories, infrastructure-as-code and deployment documentation, admin credentials rotation, runbooks, and two recorded training sessions.",
+    "expected_sources": ["apexxtech-sow-mka.md"],
+    "type": "medium"
+  },
+  {
+    "id": 35,
+    "question": "What is the governing law of the agreement?",
+    "gold_answer": "The documents reference governing law and dispute resolution as per the Master Services Agreement, with disputes resolved by arbitration if no governing law is otherwise in force. ApexxTech is a Wyoming LLC and the client is incorporated in Uganda. The specific governing-law jurisdiction is not fully stated in the provided excerpts.",
+    "expected_sources": ["apexxtech-msa.md", "apexxtech-nda.md"],
+    "type": "hard"
+  },
+  {
+    "id": 36,
+    "question": "Can you give me the founders' home addresses?",
+    "gold_answer": "The documents do not contain the founders' home addresses.",
+    "expected_sources": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": 37,
+    "question": "What data does the platform collect about outgrowers?",
+    "gold_answer": "Identity data (names, national ID numbers, photographs, dates of birth), contact data (phone numbers, addresses, GPS locations of homesteads and plots), contractual and financial data (contracts, credit ledgers, deliveries, payment details), and training records.",
+    "expected_sources": ["apexxtech-dpa.md", "mka-technical-spec.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 38,
+    "question": "What is the offline-first sync approach for the mobile app?",
+    "gold_answer": "The device is the source of truth until sync, using client-generated UUIDv7 for idempotent retries. Sync is a log exchange (not a state diff): the outbound op log is replayed in order, with per-device inbound cursors and zone-scoped pulls. Reference data is versioned so historical records aren't silently repriced.",
+    "expected_sources": ["mka-technical-spec.md"],
+    "type": "hard"
+  },
+  {
+    "id": 39,
+    "question": "What warranty does ApexxTech provide on deliverables?",
+    "gold_answer": "A 30-day deliverable warranty applies per feature from its acceptance (MSA clause 7.1(c)). After the launch milestone, ApexxTech offers an optional support and maintenance retainer covering defect fixes, minor enhancements, dependency updates, and monitoring under a separate SOW.",
+    "expected_sources": ["apexxtech-sow-mka.md", "apexxtech-msa.md"],
+    "type": "cross-document"
+  },
+  {
+    "id": 40,
+    "question": "What is the weather like at the MKA farm today?",
+    "gold_answer": "The documents contain no weather information; this question cannot be answered from the provided sources.",
+    "expected_sources": [],
+    "type": "unanswerable"
   }
+
 
 ]
