@@ -1,0 +1,8 @@
+params=2715713 device=cpu n_layer=6 n_head=6 n_embd=192 block_size=128 batch_size=32 lr=0.0003
+step     0  train 4.2440  val 4.2418
+step   200  train 2.4441  val 2.4519
+step   400  train 2.2781  val 2.2929
+step   600  train 2.0175  val 2.0834
+step   800  train 1.8389  val 1.9638
+step  1000  train 1.7227  val 1.8677
+elapsed_min=362.28
