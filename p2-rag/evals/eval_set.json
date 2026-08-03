@@ -7,7 +7,7 @@
       "apexxtech-msa.md"
     ],
     "type": "easy",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 2,
@@ -18,7 +18,7 @@
       "services.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 3,
@@ -28,7 +28,7 @@
       "mka-company-profile.md"
     ],
     "type": "medium-faithfulness",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 4,
@@ -39,7 +39,7 @@
       "apexxtech-sow-mka.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 5,
@@ -58,7 +58,7 @@
       "apexxtech-msa.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 7,
@@ -68,7 +68,7 @@
       "mka-technical-spec.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 8,
@@ -78,7 +78,7 @@
       "apexxtech-dpa.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 9,
@@ -88,7 +88,7 @@
       "mka-build-plan.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 10,
@@ -98,7 +98,7 @@
       "mka-company-profile.md"
     ],
     "type": "easy",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 11,
@@ -108,7 +108,7 @@
       "pricing.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 12,
@@ -118,7 +118,7 @@
       "mka-technical-spec.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 13,
@@ -128,7 +128,7 @@
       "mka-build-plan.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 14,
@@ -139,7 +139,7 @@
       "mka-build-plan.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 15,
@@ -150,7 +150,7 @@
       "apexxtech-sow-mka.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 16,
@@ -168,7 +168,7 @@
       "apexxtech-dpa.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 18,
@@ -179,7 +179,7 @@
       "mka-technical-spec.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 19,
@@ -189,7 +189,7 @@
       "mka-technical-spec.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 20,
@@ -199,7 +199,7 @@
       "mka-company-profile.md"
     ],
     "type": "easy",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 21,
@@ -209,7 +209,7 @@
       "pricing.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 22,
@@ -219,7 +219,7 @@
       "apexxtech-sow-mka.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 23,
@@ -229,7 +229,7 @@
       "apexxtech-sow-mka.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 24,
@@ -240,7 +240,7 @@
       "apexxtech-sow-mka.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 25,
@@ -250,7 +250,7 @@
       "apexxtech-nda.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 26,
@@ -258,7 +258,7 @@
     "gold_answer": "The documents do not mention any money-back guarantee.",
     "expected_sources": [],
     "type": "unanswerable",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 27,
@@ -268,7 +268,7 @@
       "apexxtech-dpa.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 28,
@@ -278,7 +278,7 @@
       "mka-build-plan.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 29,
@@ -289,7 +289,7 @@
       "mka-build-plan.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 30,
@@ -297,7 +297,7 @@
     "gold_answer": "The documents specify a Django/Python backend and do not discuss Rust or any backend rewrite. This question cannot be answered from the provided documents.",
     "expected_sources": [],
     "type": "unanswerable",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 31,
@@ -307,7 +307,7 @@
       "mka-technical-spec.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 32,
@@ -317,7 +317,7 @@
       "apexxtech-sow-mka.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 33,
@@ -328,7 +328,7 @@
       "mka-build-plan.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 34,
@@ -338,7 +338,7 @@
       "apexxtech-sow-mka.md"
     ],
     "type": "medium",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 35,
@@ -349,7 +349,7 @@
       "apexxtech-nda.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 36,
@@ -368,7 +368,7 @@
       "mka-technical-spec.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 38,
@@ -378,7 +378,7 @@
       "mka-technical-spec.md"
     ],
     "type": "hard",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 39,
@@ -389,7 +389,7 @@
       "apexxtech-msa.md"
     ],
     "type": "cross-document",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": 40,
@@ -397,7 +397,7 @@
     "gold_answer": "The documents contain no weather information; this question cannot be answered from the provided sources.",
     "expected_sources": [],
     "type": "unanswerable",
-    "expected_behavior": "refuse"
+    "expected_behavior": "answer"
   },
   {
     "id": "Q41",

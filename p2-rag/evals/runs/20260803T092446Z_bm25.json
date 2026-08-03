@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is ApexxTech?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-nda.md",
+      "mka-company-profile.md",
+      "apexxtech-msa.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "According to the context, ApexxTech is a digital agency providing software design, development and consulting services [source: apexxtech-msa.md]. It is organized as a limited liability company under the laws of the State of Wyoming, United States.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 2,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What services does ApexxTech offer?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-msa.md",
+      "apexxtech-msa.md",
+      "mka-build-plan.md",
+      "apexxtech-dpa.md"
+    ],
+    "output": "According to the context, ApexxTech offers the following services [source: apexxtech-msa.md]:\n\n- Software design\n- Software development\n- Consulting services\n\nMore specifically, the agreement states that \"The Client wishes to engage ApexxTech to design, build and deliver a farm-management and outgrower-aggregation platform and related services\" [source: apexxtech-msa.md].",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 3,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "Who founded the MKA project?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-company-profile.md",
+      "mka-company-profile.md",
+      "pricing.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "According to the context, MKA Agribusiness Co. was founded by two brothers who shared a deep passion for agriculture and a vision of creating meaningful change through farming. However, the specific names of these founders are not provided in the available context.\n\n[source: mka-company-profile.md]",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 4,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What are the payment terms?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "apexxtech-msa.md",
+      "apexxtech-msa.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "# Payment Terms\n\nBased on the context provided, the payment terms are:\n\n1. **Mobilisation Payment**: A mobilisation payment (typically 20% of total project cost) is due upon signature of the Statement of Work (SOW) [source: pricing.md]\n\n2. **Milestone-Based Invoicing**: Projects are priced as fixed fees per milestone, with invoices issued upon acceptance of each milestone's final feature [source: pricing.md]\n\n3. **Payment Due Date**: Invoices are payable within 14 days [source: pricing.md]\n\n4. **Late Payment Interest**: Late amounts accrue 1.5% monthly interest [source: pricing.md]\n\n5. **Excluded Costs**: Fees exclude taxes and third-party costs such as hosting, SMS credits, and domains, which the client pays directly [source: pricing.md]",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 5,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "Is there a discount available?",
+    "expected_behavior": "refuse",
+    "sources": [
+      "apexxtech-msa.md",
+      "apexxtech-msa.md",
+      "mka-technical-spec.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "The context doesn't contain information about discounts. The documents provided discuss Master Services Agreement terms, definitions, service descriptions, and project scope, but don't mention any available discounts.",
+    "verdict": "PASS",
+    "reason": "refused",
+    "metric": null
+  },
+  {
+    "id": 6,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What happens if a feature fails its Definition of Done checklist?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-sow-mka.md",
+      "apexxtech-sow-mka.md",
+      "apexxtech-msa.md",
+      "mka-build-plan.md"
+    ],
+    "output": "Based on the context provided:\n\nAccording to [source: apexxtech-sow-mka.md], if a feature fails its Definition of Done checklist, \"the feature is rejected with the specific unmet items listed.\"\n\nThe acceptance criteria are binary: either every checklist item is verified (and the feature is accepted), or the feature is rejected with the specific unmet items documented.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 7,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "How does the offline mobile app handle sync conflicts?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-build-plan.md",
+      "mka-technical-spec.md",
+      "mka-build-plan.md",
+      "mka-technical-spec.md"
+    ],
+    "output": "According to the context, the offline mobile app handles sync conflicts with a **conflict policy per-field** approach (source: mka-technical-spec.md):\n\n1. **Inserts can't conflict**\n2. **Server-wins on financial/status fields**\n3. **Last-writer-wins with audit on descriptive fields**\n4. **Manual review for identity fields**\n5. **No CRDTs** are used\n\nAdditionally, the sync mechanism itself uses an **operation log replay approach** where the outbound op log is replayed in order with per-device inbound cursors and zone-scoped pulls, with idempotency ensured through client-generated UUIDv7 (source: mka-technical-spec.md).",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 8,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What security measures does the DPA require for personal data?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-dpa.md",
+      "apexxtech-dpa.md",
+      "apexxtech-nda.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "# Security Measures Required by the DPA\n\nAccording to the apexxtech-dpa.md, ApexxTech shall implement and maintain the following minimum security measures:\n\n- **Encryption**: TLS 1.2+ encryption in transit and at rest; field-level encryption of national ID numbers, phone numbers and payment identifiers; tokenised display of payment instruments.\n\n- **Access Control**: Role-based, deny-by-default access control with object-level scoping; dual approval on money-adjacent actions (from feature F1 onward).\n\n- **Audit Logging**: Append-only audit logging of data (the context cuts off but indicates this requirement).\n\n[source: apexxtech-dpa.md]",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 9,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is feature F9 in the build plan?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-sow-mka.md",
+      "mka-build-plan.md",
+      "mka-build-plan.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "The context doesn't contain a detailed description of what feature F9 is. \n\nThe only mention of F9 in the provided context is that it concentrates risk and is related to \"money math\" (apexxtech-sow-mka.md), and that it carries \"property-based/simulation test requirements in their DoD\" with instructions not to compress its estimates (mka-build-plan.md). However, the actual feature definition and scope for F9 are not included in the context provided.\n\nTo find the complete definition of feature F9, you would need to consult the full BUILD-PLAN.md document referenced in the context.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 10,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "How many acres and outgrowers does MKA currently operate?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-company-profile.md",
+      "mka-company-profile.md",
+      "mka-company-profile.md",
+      "pricing.md"
+    ],
+    "output": "According to the context (source: mka-company-profile.md):\n\n**Current Scale:**\n- Approximately **512 acres** currently under operation\n- **184 registered outgrowers**",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 11,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the deployment and infrastructure cost estimate?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "apexxtech-sow-mka.md",
+      "apexxtech-nda.md",
+      "mka-company-profile.md"
+    ],
+    "output": "According to [source: pricing.md], the ongoing deployment and infrastructure costs for the MKA Agribusiness platform project are estimated at **$800–900 USD per year**, covering cloud hosting, database, SMS gateway credits, and monitoring.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 12,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What technology stack does the MKA platform use?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-nda.md",
+      "mka-company-profile.md",
+      "mka-build-plan.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "According to the context, the MKA Agribusiness Platform uses the following technology stack [source: mka-build-plan.md]:\n\n**Backend:**\n- Django 5\n- Django REST Framework (DRF)\n- PostgreSQL 18/PostGIS\n- Celery/Redis\n\n**Frontend:**\n- Next.js 15\n- TypeScript\n- Tailwind\n\n**Mobile:**\n- React Native (Expo) for the field app\n\n**Additional services:**\n- Africa's Talking SMS",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 13,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the first externally demoable milestone in the build plan?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-build-plan.md",
+      "apexxtech-sow-mka.md",
+      "mka-build-plan.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "According to the context, the first externally demoable milestone in the build plan is **F6: a real buying day runs digitally** (source: mka-build-plan.md).\n\nThe document states: \"First externally demoable value at F6: a real buying day runs digitally.\"",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 14,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "How does the platform prevent fraud at input issuance and harvest intake?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-technical-spec.md",
+      "mka-technical-spec.md",
+      "pricing.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "# Answer\n\nAccording to the context, the platform prevents fraud at input issuance and harvest intake through a **dual-control rule** [source: mka-technical-spec.md]:\n\n> \"any money-adjacent mutation (input issuance above threshold, farmer payment, credit write-off, stock adjustment) requires a second role's approval. This is a fraud-surface decision — aggregation businesses leak value at intake and issuance points.\"\n\nThis means that input issuance above a certain threshold requires approval from a second role before it can be completed. The specification explicitly identifies intake and issuance as key fraud-risk points in aggregation businesses and implements dual-control (two-person approval) as the mitigation strategy.\n\nHowever, the context does not provide additional technical details about how harvest intake specifically is protected beyond this general dual-control principle.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 15,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What are the client's obligations under the agreement?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-msa.md",
+      "apexxtech-msa.md",
+      "apexxtech-dpa.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "According to the Master Services Agreement (apexxtech-msa.md), the Client's obligations include:\n\n(a) Appointing a product owner with authority to make workflow and acceptance decisions within five (5) business days of a request;\n\n(b) Providing timely access to information, personnel, existing registers/data, premises and third-party accounts (including SMS gateway, hosting and domain accounts) reasonably required;\n\n(c) Being responsible for [the context cuts off here, so the complete obligation is not provided].\n\nThe document also notes that changes to a Statement of Work's scope, timeline or fees must be made through a written change request signed by both parties.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 16,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the client contact's phone number?",
+    "expected_behavior": "refuse",
+    "sources": [
+      "apexxtech-dpa.md",
+      "apexxtech-dpa.md",
+      "mka-technical-spec.md",
+      "mka-build-plan.md"
+    ],
+    "output": "The context doesn't contain the client contact's phone number. The documents provided are a Data Protection Addendum and technical specifications that describe what categories of personal data are processed (including phone numbers as a category), but they do not provide any specific client contact phone number.",
+    "verdict": "PASS",
+    "reason": "refused",
+    "metric": null
+  },
+  {
+    "id": 17,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What happens to a personal data breach under the DPA?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-dpa.md",
+      "apexxtech-dpa.md",
+      "apexxtech-nda.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "According to the context (apexxtech-dpa.md), when a personal data breach occurs:\n\n**ApexxTech shall notify the Client without undue delay after becoming aware of a personal data breach affecting the Client's personal data, providing sufficient information to allow the Client to meet its own notification obligations.**\n\nThe source document specifies that notification must be timely and include enough information for the Client to fulfill its own legal notification requirements.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 18,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is out of scope for the MKA project?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-company-profile.md",
+      "pricing.md",
+      "apexxtech-msa.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "The context doesn't contain information about what is out of scope for the MKA project. While the SOW document [source: apexxtech-sow-mka.md] describes the project scope, the provided excerpt is incomplete and does not include any section detailing out-of-scope items.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 19,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "How is the RBAC permission system structured?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-technical-spec.md",
+      "mka-technical-spec.md",
+      "apexxtech-sow-mka.md",
+      "mka-build-plan.md"
+    ],
+    "output": "According to the context, the RBAC permission system is structured as follows [source: mka-technical-spec.md]:\n\n**Authorization model:** Role-based with per-object scoping. This means:\n- A farm manager sees only their assigned farms\n- A warehouse manager only sees their depots\n- Implemented as **role → permission grants plus user → scope assignments**\n\nAdditionally [source: mka-build-plan.md], the system includes:\n- User/Role/Permission/RoleGrant/UserScope models\n- A **single choke-point authorize(actor, verb, resource)** function with deny-by-default logic\n- A **table-driven permission matrix test** covering every role × resource × verb combination",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 20,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What are MKA's expansion goals for 2030?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-company-profile.md",
+      "mka-company-profile.md",
+      "mka-company-profile.md",
+      "pricing.md"
+    ],
+    "output": "According to the context (source: mka-company-profile.md), MKA's vision for 2030 includes:\n\n- Expand to approximately 30,000 acres\n- Build a network of approximately 10,000 registered outgrowers\n- Develop integrated production, aggregation, storage, processing, and [the list appears to be incomplete in the provided context]",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 21,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "How much does the MKA platform project cost?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "apexxtech-sow-mka.md",
+      "apexxtech-nda.md",
+      "mka-technical-spec.md"
+    ],
+    "output": "According to the pricing.md source, the MKA Agribusiness platform project was quoted at **$1,500 USD for design and development** (quotation APX-2026 series).\n\nAdditionally, ongoing deployment and infrastructure costs are estimated at **$800–900 USD per year**, covering cloud hosting, database, SMS gateway credits, and monitoring.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 22,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the mobilisation payment and when is it due?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-sow-mka.md",
+      "pricing.md",
+      "apexxtech-nda.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "According to the context, the mobilisation payment is **20% of the total project cost** and is **due on signature of the SOW (Statement of Work)**.\n\nThe mobilisation payment is then credited against M0 and M1 milestones in equal parts.\n\n[source: apexxtech-sow-mka.md]",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 23,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What are the milestones in the MKA payment schedule?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-sow-mka.md",
+      "mka-company-profile.md",
+      "apexxtech-msa.md",
+      "pricing.md"
+    ],
+    "output": "Based on the context provided, I can only identify one complete milestone from the payment schedule:\n\n**M0 — Foundation** (Features F0, F2) with a deliverable outcome of \"Deployed skeleton\" [source: apexxtech-sow-mka.md]\n\nThe document appears to be cut off and does not show the complete milestones and payment schedule table. The context does not contain enough information to provide a full list of all milestones in the MKA payment schedule.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 24,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the estimated total build time for the platform?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "apexxtech-msa.md",
+      "apexxtech-nda.md",
+      "mka-company-profile.md"
+    ],
+    "output": "The context provided does not contain information about the estimated total build time for the platform. While the pricing document mentions the MKA Platform Project was quoted at $1,500 USD for design and development, and the MSA references \"timeline\" as something to be set out in specific statements of work, no actual build time estimate is specified in these documents.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 25,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the confidentiality term under the NDA?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-nda.md",
+      "mka-company-profile.md",
+      "apexxtech-nda.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "According to the context [source: apexxtech-nda.md], under Section 5 (Term):\n\n- The NDA covers disclosures made during the **three (3) years after the Effective Date**\n- Obligations for each item of Confidential Information continue for **five (5) years from its disclosure**\n- For **trade secrets, source code and personal data, obligations continue indefinitely**",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 26,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "Does ApexxTech offer a money-back guarantee?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-msa.md",
+      "mka-build-plan.md",
+      "apexxtech-nda.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "The context provided does not contain information about whether ApexxTech offers a money-back guarantee. While the documents discuss warranties, fees, and payment terms, they do not specifically address money-back guarantees.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 27,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What sub-processors does the DPA authorize?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-dpa.md",
+      "apexxtech-dpa.md",
+      "apexxtech-nda.md",
+      "mka-company-profile.md"
+    ],
+    "output": "According to the DPA (apexxtech-dpa.md), Section 3.1 authorizes the engagement of the following categories of sub-processors:\n\n1. Cloud infrastructure and storage providers\n2. SMS/USSD gateway providers\n3. Error-monitoring services\n4. Email delivery services\n\nThe document provides examples including cloud hosts, Africa's Talking (or equivalent SMS providers), and Sentry monitoring.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 28,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the walking skeleton (feature F0)?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-build-plan.md",
+      "apexxtech-sow-mka.md",
+      "mka-build-plan.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "# Walking Skeleton (Feature F0)\n\nAccording to [source: mka-build-plan.md], the walking skeleton (F0) is:\n\nA Django project with:\n- **Module layout**: identity, land, outgrowers, inputs, aggregation, sales, finance, messaging, sync, core\n- **Core abstractions**: BaseModel (UUIDv7 PK, org_id, timestamps, actors), org-scoped manager, soft-delete mixin\n- **Audit & events**: AuditEvent model + middleware diffing before/after jsonb; DB role INSERT-only; Persisted domain event bus with Celery consumer\n- **API layer**: DRF with cursor pagination, RFC 7807 errors, Idempotency-Key middleware, OpenAPI generation\n- **Infrastructure**: Docker compose, GitHub Actions CI (ruff, mypy, pytest, migration check)\n- **Frontend**: Next.js 15 shell, design tokens (green/earth palette), typed API client\n\nF0 is estimated at **8 days** of work and is classified as the \"foundation\" feature. According to [source: apexxtech-sow-mka.md], F0 is part of **Milestone M0**, which delivers a \"deployed skeleton.\"",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 29,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "How does the platform handle farmer credit and recovery at harvest?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-technical-spec.md",
+      "pricing.md",
+      "apexxtech-sow-mka.md",
+      "mka-technical-spec.md"
+    ],
+    "output": "# Answer\n\nBased on the provided context, the specific mechanics of how the platform handles farmer credit and recovery at harvest are not fully detailed.\n\nWhat the context does reveal [source: mka-technical-spec.md]:\n\n- The core business loop involves \"Inputs issued to outgrowers on credit → Production cycle (company farms + outgrower plots) → Harvest intake → grad[e]\"\n- The platform covers \"input credit\" and \"harvest aggregation with quality grading\" as part of the full value chain\n- Phase 2 of development (6 weeks) includes \"Input credit & farmer payments\"\n\nHowever, the specific details about credit recovery mechanisms, terms, fees, and the harvest reconciliation process are listed as **open questions for the client** [source: mka-technical-spec.md]: \"credit fees and recovery caps\" are explicitly mentioned as items still to be determined.\n\nThe context does not contain a complete answer to your question about the specific operational procedures for credit and recovery at harvest.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 30,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What programming language should I use to rewrite the backend in Rust?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-nda.md",
+      "apexxtech-nda.md",
+      "mka-build-plan.md",
+      "mka-company-profile.md"
+    ],
+    "output": "The context doesn't contain information about rewriting the backend in Rust or recommendations about using Rust as a programming language.\n\nAccording to the build plan [source: mka-build-plan.md], the current backend stack is Django 5 + DRF + PostgreSQL 18/PostGIS + Celery/Redis, but there is no discussion of Rust or backend rewrites in the provided context.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 31,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What non-functional performance requirements does the platform target?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-technical-spec.md",
+      "apexxtech-nda.md",
+      "apexxtech-nda.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "According to the technical specification [source: mka-technical-spec.md], the platform targets the following non-functional performance requirements:\n\n- **API Performance**: p95 API response time < 400 ms\n- **Dashboard Performance**: < 2 seconds on 3G connections\n- **Sync Performance**: full-day sync < 90 seconds on 2G-grade links with a ≤ 2 MB payload budget (excluding photos)\n- **Availability**: 99.5% for web/API in single region for v1\n- **Field App**: fully functional offline indefinitely",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 32,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the change control procedure?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-msa.md",
+      "apexxtech-sow-mka.md",
+      "mka-company-profile.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "According to the context, the change control procedure is as follows [source: apexxtech-sow-mka.md]:\n\n1. Either Party may propose a change in writing describing the change, its rationale, and its impact on fees and schedule.\n2. ApexxTech shall provide an impact assessment within five (5) business days.\n3. No change is effective until both Parties sign the change request.\n4. ApexxTech may decline changes that compromise system integrity or security.\n\nAdditionally, the MSA [source: apexxtech-msa.md] notes that changes to an SOW's scope, timeline or fees are effective only through a written change request signed by both Parties.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 33,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "How does the platform detect side-selling by farmers?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-technical-spec.md",
+      "mka-technical-spec.md",
+      "pricing.md",
+      "mka-technical-spec.md"
+    ],
+    "output": "According to the context (mka-technical-spec.md), the platform detects side-selling through **side-selling detection heuristics that compare contracted area × agronomic yield benchmark vs delivered volume**.\n\nAdditionally, the platform uses **instant farmer receipts** (printed slip and/or SMS with weight, grade, price, deductions, net payable, and running credit balance) as \"the anti-side-selling weapon\" through transparency at intake stations.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 34,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What happens on final payment and handover?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-sow-mka.md",
+      "pricing.md",
+      "apexxtech-dpa.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "According to the context (source: apexxtech-sow-mka.md), on final payment, handover includes:\n\n- Source code repositories\n- Infrastructure-as-code and deployment documentation\n- Admin credentials rotation\n- Runbooks\n- Two (2) recorded training sessions",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 35,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the governing law of the agreement?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-nda.md",
+      "apexxtech-nda.md",
+      "apexxtech-msa.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "According to the context, the governing law is determined as follows:\n\n\"Governing law and disputes: as per clause 12 of the Master Services Agreement between the Parties or, if none is in force, agreed governing law with disputes resolved by arbitration.\" [source: apexxtech-nda.md]\n\nThis means the governing law is specified in clause 12 of the Master Services Agreement between the parties, or if no Master Services Agreement is in force, it would be the agreed governing law with disputes resolved by arbitration. However, the specific governing law is not detailed in the provided context.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 36,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "Can you give me the founders' home addresses?",
+    "expected_behavior": "refuse",
+    "sources": [
+      "mka-company-profile.md",
+      "apexxtech-dpa.md",
+      "apexxtech-dpa.md",
+      "mka-technical-spec.md"
+    ],
+    "output": "The context doesn't contain the founders' home addresses. \n\nThe MKA company profile [source: mka-company-profile.md] mentions that the two brothers who founded MKA Agribusiness Co. grew up in Uganda, but it does not provide their home addresses.",
+    "verdict": "PASS",
+    "reason": "refused",
+    "metric": null
+  },
+  {
+    "id": 37,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What data does the platform collect about outgrowers?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-technical-spec.md",
+      "mka-company-profile.md",
+      "apexxtech-nda.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "The context doesn't contain specific details about what data the platform collects about outgrowers. \n\nThe technical specification [source: mka-technical-spec.md] mentions that the system involves \"registration and management of contracted outgrowers (smallholder farmers)\" as part of digitizing the value chain, but it doesn't specify which data fields or types of information are collected.\n\nThe NDA [source: apexxtech-nda.md] references \"farmer/outgrower registers and personal data\" as examples of confidential information, but this doesn't describe what data is actually collected.\n\nTo answer this question, you would need additional documentation such as data models, system requirements specifications, or database schemas.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 38,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the offline-first sync approach for the mobile app?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-company-profile.md",
+      "mka-technical-spec.md",
+      "mka-technical-spec.md",
+      "mka-build-plan.md"
+    ],
+    "output": "# Offline-First Sync Approach for the Mobile App\n\nAccording to the context [source: mka-technical-spec.md], the offline-first sync approach is based on four key principles:\n\n1. **Device as source of truth**: The device is the source of truth until sync occurs. Offline records are assigned client-generated UUIDv7 identifiers to make retries idempotent.\n\n2. **Log exchange, not state diff**: Sync works by exchanging logs rather than diffing state — the outbound operation log is replayed in order, with per-device inbound cursors and zone-scoped pulls.\n\n3. **Conflict policy per-field**: \n   - Inserts cannot conflict\n   - Server-wins on financial/status fields\n   - Last-writer-wins (LWW) with audit on descriptive fields\n   - Manual review required for identity fields\n   - No CRDTs used\n\n4. **Versioned reference data**: Reference data is versioned so that an intake captured against a specific price-sheet version retains that version, preventing silent repricing of historical records.\n\nThe implementation [source: mka-build-plan.md] uses `POST /sync/push` for ordered op-log replay and `GET /sync/pull` with per-device cursors and zone-scoped changes, with a sync simulation harness in CI to test for duplicates, out-of-order operations, and interruptions.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": 39,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What warranty does ApexxTech provide on deliverables?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-sow-mka.md",
+      "apexxtech-msa.md",
+      "apexxtech-msa.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "According to the context, ApexxTech provides a **30-day Deliverable warranty** that applies per feature from its acceptance [source: apexxtech-sow-mka.md, section 7.1].\n\nThe specific terms reference \"the 30-day Deliverable warranty in MSA clause 7.1(c)\" but the full details of that MSA clause are not included in the provided context.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": 40,
+    "category": "uncategorised",
+    "retriever": "bm25",
+    "question": "What is the weather like at the MKA farm today?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-company-profile.md",
+      "mka-build-plan.md",
+      "apexxtech-sow-mka.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "The context doesn't contain information about the weather at the MKA farm today. The provided documents are a company profile, a build plan, a statement of work, and an NDA excerpt—none of which include current weather data or conditions.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": "Q41",
+    "category": "false_premise",
+    "retriever": "bm25",
+    "question": "What are the terms of the 90-day pilot refund policy?",
+    "expected_behavior": "refuse_and_correct_premise",
+    "sources": [
+      "mka-build-plan.md",
+      "apexxtech-msa.md",
+      "apexxtech-msa.md",
+      "pricing.md"
+    ],
+    "output": "The context provided does not contain information about a 90-day pilot refund policy. I cannot answer this question based on the available sources.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": "Q42",
+    "category": "near_miss_distractor",
+    "retriever": "bm25",
+    "question": "What are the acceptance criteria for the MKA project?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "apexxtech-msa.md",
+      "apexxtech-sow-mka.md",
+      "mka-company-profile.md"
+    ],
+    "output": "According to the context, the acceptance criteria for the MKA project are defined as a \"Definition of Done\" checklist set out in Exhibit B of the Statement of Work (source: apexxtech-sow-mka.md).\n\nThe acceptance process is binary: a feature is accepted only when every checklist item is verified, or the feature is rejected with the specific unmet items listed. There is no partial acceptance (source: apexxtech-sow-mka.md).\n\nHowever, the context does not provide the specific details of what items are included in the actual Definition of Done checklist for the MKA project.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": "Q43",
+    "category": "partial_answer",
+    "retriever": "bm25",
+    "question": "What was the MKA platform project quoted at, and what does the monthly support retainer cost?",
+    "expected_behavior": "answer_partial_and_flag_gap",
+    "sources": [
+      "pricing.md",
+      "pricing.md",
+      "mka-company-profile.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "Based on the context provided:\n\n**MKA Platform Project Quote:**\nThe MKA Agribusiness platform project was quoted at **$1,500 USD for design and development** (quotation APX-2026 series) [source: pricing.md]\n\n**Monthly Support Retainer Cost:**\nThe context does not contain the specific cost of the monthly support retainer. It only states that ApexxTech \"offers an optional monthly support retainer covering defect fixes, minor enhancements, dependency updates and monitoring, priced per agreed hours, under a separate SOW\" [source: pricing.md], but no actual price is given.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": "Q44",
+    "category": "cost_direct",
+    "retriever": "bm25",
+    "question": "What are the estimated annual deployment and infrastructure costs, and what do they cover?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "mka-company-profile.md",
+      "apexxtech-nda.md",
+      "apexxtech-sow-mka.md"
+    ],
+    "output": "According to the context, the estimated annual deployment and infrastructure costs for the MKA Agribusiness platform project are **$800–900 USD per year** [source: pricing.md].\n\nThese costs cover:\n- Cloud hosting\n- Database\n- SMS gateway credits\n- Monitoring\n\n[source: pricing.md]",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": "Q45",
+    "category": "cost_lexical_mismatch",
+    "retriever": "bm25",
+    "question": "How are engagement fees structured?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "apexxtech-msa.md",
+      "mka-technical-spec.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "# Engagement Fee Structure\n\nAccording to [source: pricing.md], ApexxTech's engagement fees are structured as follows:\n\n- **Fixed fees per milestone**: Projects are priced as fixed fees per milestone, invoiced upon acceptance of each milestone's final feature.\n\n- **Mobilisation payment**: A mobilisation payment (typically 20% of total project cost) is due upon SOW (Statement of Work) signature.\n\n- **Exclusions**: Fees exclude taxes and third-party costs such as hosting, SMS credits, and domains, which the client pays directly.\n\n- **Payment terms**: Invoices are payable within 14 days; late amounts accrue 1.5% monthly interest.\n\nAdditionally, [source: apexxtech-msa.md] notes that scope, timeline, and fees changes require a written change request signed by both parties through the \"Change Control\" procedure in the SOW.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": "Q46",
+    "category": "single_fact_control",
+    "retriever": "bm25",
+    "question": "How many days is F18, the offline field mobile app, estimated at?",
+    "expected_behavior": "answer",
+    "sources": [
+      "pricing.md",
+      "mka-build-plan.md",
+      "mka-build-plan.md",
+      "mka-build-plan.md"
+    ],
+    "output": "According to the context, F18 — Offline field mobile app is estimated at **15 days** [source: mka-build-plan.md].\n\nThe document also notes that F18 is \"the hardest slice\" and identifies it as one of two features that concentrate the risk on the project.",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": "Q47",
+    "category": "cross_row_comparison",
+    "retriever": "bm25",
+    "question": "Which feature in the build plan has the longest estimate, and which has the shortest?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-msa.md",
+      "mka-build-plan.md",
+      "apexxtech-sow-mka.md",
+      "apexxtech-nda.md"
+    ],
+    "output": "The context doesn't contain the answer to this question. While the mka-build-plan.md file [source: mka-build-plan.md] mentions that two features (F9 and F18) carry significant risk and have property-based/simulation test requirements, and references a feature-at-a-time discipline with ~10% budget for bug fixes, it does not provide the actual time estimates for individual features that would allow me to identify which has the longest or shortest estimate.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  },
+  {
+    "id": "Q48",
+    "category": "enumeration_completeness",
+    "retriever": "bm25",
+    "question": "List all the features in the MKA build plan.",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-build-plan.md",
+      "apexxtech-sow-mka.md",
+      "apexxtech-nda.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "The context doesn't contain a complete list of all features in the MKA build plan. \n\nThe document [source: mka-build-plan.md] mentions that the build plan covers \"features F0–F20\" and states that the plan uses a vertical slice method where each feature is taken to done before the next begins. However, the actual names and descriptions of individual features F0 through F20 are not provided in the context.\n\nThe [source: apexxtech-sow-mka.md] does mention some high-level functional areas (warehouse storage, sales and dispatch, farmer payments, finance and analytics, an offline-capable field mobile application, and an SMS/USSD farmer channel), but these appear to be functional components rather than the specific feature list from the build plan.\n\nTo get the complete feature list, you would need to consult the full mka-build-plan.md document.",
+    "verdict": "FAIL",
+    "reason": "recall 2/21",
+    "metric": 0.095
+  },
+  {
+    "id": "Q49",
+    "category": "isolated_fact_high_overlap",
+    "retriever": "bm25",
+    "question": "What outgrower headroom does the architecture already carry?",
+    "expected_behavior": "answer",
+    "sources": [
+      "mka-build-plan.md",
+      "mka-build-plan.md",
+      "apexxtech-nda.md",
+      "mka-build-plan.md"
+    ],
+    "output": "According to the context, the architecture already carries 10,000-outgrower headroom [source: mka-build-plan.md].",
+    "verdict": "REVIEW",
+    "reason": "answered — needs human label",
+    "metric": null
+  },
+  {
+    "id": "Q50",
+    "category": "multi_hop",
+    "retriever": "bm25",
+    "question": "Which build plan features handle data that falls under the DPA's definition of personal data?",
+    "expected_behavior": "answer",
+    "sources": [
+      "apexxtech-sow-mka.md",
+      "apexxtech-nda.md",
+      "apexxtech-sow-mka.md",
+      "apexxtech-msa.md"
+    ],
+    "output": "The context doesn't contain the answer to this question. \n\nWhile the context references Exhibit B — Feature Build Plan (BUILD-PLAN.md, features F0–F20) in the SOW [source: apexxtech-sow-mka.md], the actual build plan document with feature details is not provided. Additionally, while the NDA mentions that obligations for \"personal data\" continue indefinitely [source: apexxtech-nda.md], there is no Data Protection Agreement (DPA) included in the context, nor any mapping of which specific features (F0–F20) handle personal data under a DPA's definition.\n\nTo answer this question, I would need access to the actual BUILD-PLAN.md file and the relevant DPA document.",
+    "verdict": "FAIL",
+    "reason": "refused when answer expected",
+    "metric": null
+  }
+]
