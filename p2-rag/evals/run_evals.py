@@ -11,6 +11,7 @@ import re
 import sys
 import time
 from pathlib import Path
+from retrievers import get_backend
 from datetime import datetime, timezone
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -72,11 +73,12 @@ def main(retriever):
     pairs = json.loads((EVALS / "eval_set.json").read_text(encoding="utf-8"))
     validate(pairs)
 
-    col = build_index(build_chunks(load_documents()))
+    retrieve, answer, meta = get_backend(retriever)
+    print(f"backend: {meta}")
     rows, t0 = [], time.time()
 
     for p in pairs:
-        got = retrieve(col, p["question"], k=4)
+        got = retrieve(p["question"], k=4)
         out = answer(p["question"], got)
         verdict, reason, metric = score(p, out)
         rows.append({
