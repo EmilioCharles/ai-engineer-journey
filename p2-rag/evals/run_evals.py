@@ -92,6 +92,7 @@ def main(retriever):
             "verdict": verdict,
             "reason": reason,
             "metric": metric,
+            "expected_answer": p.get("expected_answer") or p.get("gold_answer"),
         })
         print(f"{p['id']:>5}  {verdict:<6}  {reason}")
 

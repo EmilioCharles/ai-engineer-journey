@@ -1,0 +1,219 @@
+{
+  "20260803T104342Z_bm25.json::1": {
+    "id": 1,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What is ApexxTech?"
+  },
+  "20260803T104342Z_bm25.json::2": {
+    "id": 2,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What services does ApexxTech offer?"
+  },
+  "20260803T104342Z_bm25.json::4": {
+    "id": 4,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What are the payment terms?"
+  },
+  "20260803T104342Z_bm25.json::6": {
+    "id": 6,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What happens if a feature fails its Definition of Done checklist?"
+  },
+  "20260803T104342Z_bm25.json::7": {
+    "id": 7,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "How does the offline mobile app handle sync conflicts?"
+  },
+  "20260803T104342Z_bm25.json::8": {
+    "id": 8,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What security measures does the DPA require for personal data?"
+  },
+  "20260803T104342Z_bm25.json::10": {
+    "id": 10,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "How many acres and outgrowers does MKA currently operate?"
+  },
+  "20260803T104342Z_bm25.json::11": {
+    "id": 11,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What is the deployment and infrastructure cost estimate?"
+  },
+  "20260803T104342Z_bm25.json::12": {
+    "id": 12,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What technology stack does the MKA platform use?"
+  },
+  "20260803T104342Z_bm25.json::13": {
+    "id": 13,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What is the first externally demoable milestone in the build plan?"
+  },
+  "20260803T104342Z_bm25.json::14": {
+    "id": 14,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "How does the platform prevent fraud at input issuance and harvest intake?"
+  },
+  "20260803T104342Z_bm25.json::15": {
+    "id": 15,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What are the client's obligations under the agreement?"
+  },
+  "20260803T104342Z_bm25.json::17": {
+    "id": 17,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What happens to a personal data breach under the DPA?"
+  },
+  "20260803T104342Z_bm25.json::19": {
+    "id": 19,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "How is the RBAC permission system structured?"
+  },
+  "20260803T104342Z_bm25.json::20": {
+    "id": 20,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What are MKA's expansion goals for 2030?"
+  },
+  "20260803T104342Z_bm25.json::21": {
+    "id": 21,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "How much does the MKA platform project cost?"
+  },
+  "20260803T104342Z_bm25.json::22": {
+    "id": 22,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What is the mobilisation payment and when is it due?"
+  },
+  "20260803T104342Z_bm25.json::25": {
+    "id": 25,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What is the confidentiality term under the NDA?"
+  },
+  "20260803T104342Z_bm25.json::27": {
+    "id": 27,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What sub-processors does the DPA authorize?"
+  },
+  "20260803T104342Z_bm25.json::28": {
+    "id": 28,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "FAIL",
+    "note": "",
+    "question": "What is the walking skeleton (feature F0)?"
+  },
+  "20260803T104342Z_bm25.json::31": {
+    "id": 31,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "FAIL",
+    "note": "",
+    "question": "What non-functional performance requirements does the platform target?"
+  },
+  "20260803T104342Z_bm25.json::32": {
+    "id": 32,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "FAIL",
+    "note": "",
+    "question": "What is the change control procedure?"
+  },
+  "20260803T104342Z_bm25.json::33": {
+    "id": 33,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "FAIL",
+    "note": "",
+    "question": "How does the platform detect side-selling by farmers?"
+  },
+  "20260803T104342Z_bm25.json::34": {
+    "id": 34,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "FAIL",
+    "note": "",
+    "question": "What happens on final payment and handover?"
+  },
+  "20260803T104342Z_bm25.json::35": {
+    "id": 35,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "FAIL",
+    "note": "",
+    "question": "What is the governing law of the agreement?"
+  },
+  "20260803T104342Z_bm25.json::38": {
+    "id": 38,
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "FAIL",
+    "note": "",
+    "question": "What is the offline-first sync approach for the mobile app?"
+  },
+  "20260803T104342Z_bm25.json::Q43": {
+    "id": "Q43",
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What was the MKA platform project quoted at, and what does the monthly support retainer cost?"
+  },
+  "20260803T104342Z_bm25.json::Q44": {
+    "id": "Q44",
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What are the estimated annual deployment and infrastructure costs, and what do they cover?"
+  },
+  "20260803T104342Z_bm25.json::Q45": {
+    "id": "Q45",
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "How are engagement fees structured?"
+  },
+  "20260803T104342Z_bm25.json::Q46": {
+    "id": "Q46",
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "How many days is F18, the offline field mobile app, estimated at?"
+  },
+  "20260803T104342Z_bm25.json::Q49": {
+    "id": "Q49",
+    "run": "20260803T104342Z_bm25.json",
+    "verdict": "PASS",
+    "note": "",
+    "question": "What outgrower headroom does the architecture already carry?"
+  }
+}
