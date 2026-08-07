@@ -9,3 +9,8 @@ notebooks/scratch/
 outputs/
 p2-rag/docs/
 p2-rag/chroma_db/
+*.pt
+check.txt
+compare.txt
+refuse_rows.txt
+p2-rag/diag.py
