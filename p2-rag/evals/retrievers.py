@@ -1,15 +1,17 @@
-"""Retriever adapters — lets run_evals.py score either backend.
+"""Retriever adapters — lets run_evals.py score any backend.
 
-chroma : p2-rag/rag.py            (local dev, dense embeddings, 95 chunks)
+chroma : p2-rag/rag.py              (local dev, Chroma dense, live docs/)
 bm25   : p2-rag/deploy/api/index.py (production on Vercel, frozen chunks.json)
+hybrid : src/retriever.py           (BM25 + precomputed dense, fused via RRF)
 
-Both expose the same pair of callables, so the runner stays backend-agnostic:
+All three expose the same pair of callables, so the runner stays
+backend-agnostic:
     retrieve(question, k) -> list[chunk dict]
     answer(question, retrieved) -> str
 
-Note: the two paths do NOT see the same corpus. chunks.json is a frozen
-snapshot and is currently missing pricing.md. That difference is the point
-of running both.
+chunks.json is a build artifact, not a live read — regenerate it with
+build_chunks_snapshot.py after any change to docs/. It drifted to 93 chunks
+once while docs/ was at 95, which is why that script exists.
 """
 import sys
 from pathlib import Path
@@ -44,11 +46,35 @@ def get_backend(name):
                 "source": "deploy/api/index.py"}
         return retrieve, prod.answer, meta
 
-    raise SystemExit(f"unknown retriever: {name!r} (expected 'chroma' or 'bm25')")
+    if name == "hybrid":
+        sys.path.insert(0, str(P2))
+        import json as _json
+        from src.retriever import HybridRetriever
+        from src.generator import Generator
+
+        chunks = _json.loads(
+            (P2 / "deploy" / "api" / "chunks.json").read_text(encoding="utf-8")
+        )
+        r = HybridRetriever(chunks)
+        gen = Generator()
+
+        def retrieve(question, k=4):
+            return r.retrieve(question, k=k)
+
+        def answer(question, retrieved):
+            return gen.answer(question, retrieved)
+
+        meta = {"retriever": "hybrid", "chunks": len(chunks),
+                "source": "src/retriever.py HybridRetriever (RRF)"}
+        return retrieve, answer, meta
+
+    raise SystemExit(
+        f"unknown retriever: {name!r} (expected 'chroma', 'bm25' or 'hybrid')"
+    )
 
 
 if __name__ == "__main__":
-    for name in ("chroma", "bm25"):
+    for name in ("chroma", "bm25", "hybrid"):
         try:
             _, _, meta = get_backend(name)
             print(meta)
